@@ -1,0 +1,83 @@
+<header>
+  <div class="header-top">
+    <div class="custom-container d-flex gap-5 align-items-center">
+      <div class="header-top-left justify-content-start">
+        <ul>
+          <li *ngFor="let item of headerTopLeftItems">
+            <i class="bi" [ngClass]="item.icon"></i> {{ item.text }}
+          </li>
+        </ul>
+      </div>
+
+      <div class="header-top-right justify-content-end">
+        <div class="header-top-right-social">
+          <a
+            *ngFor="let socialItem of headerTopRightSocialItems"
+            [href]="socialItem.link"
+          >
+            <i class="bi" [ngClass]="socialItem.icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="down-header custom-container">
+    <div class="header-logo">
+      <img [src]="headerLogoImage" alt="" />
+    </div>
+
+    <nav class="header-menu">
+      <ul class="navbar"  [ngClass]="{'open': isNavbarOpen}">
+        <ng-container *ngFor="let menuItem of headerMenuItems">
+          <li *ngIf="!menuItem.dropdownItems">
+            <a [href]="menuItem.link">{{ menuItem.label }}</a>
+          </li>
+          <li *ngIf="menuItem.dropdownItems" class="dropdown">
+            <a
+              href="#"
+              class="dropdown-toggle"
+              role="button"
+              data-bs-toggle="dropdown"
+            >
+              {{ menuItem.label }}
+            </a>
+            <div class="dropdown-menu">
+              <a
+                class="dropdown-item"
+                *ngFor="let subItem of menuItem.dropdownItems"
+                [href]="subItem.link"
+              >
+                {{ subItem.label }}
+              </a>
+            </div>
+          </li>
+        </ng-container>
+      </ul>
+    </nav>
+    <div class="main">
+      <div class="header-cart">
+        <ul>
+          <li>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#wishlistModal">
+              <i class="bi bi-heart"></i> <span>{{ favoriteCount }}</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#cartUpdateModal"
+            >
+              <i class="bi bi-cart"></i> <span>{{ cartCount }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div (click)="isNavbarOpen = !isNavbarOpen" id="menu-icon">
+        <span *ngIf="!isNavbarOpen"><i class="bi bi-list"></i></span
+        ><span *ngIf="isNavbarOpen"><i class="bi bi-x"></i></span>
+      </div>
+    </div>
+  </div>
+</header>

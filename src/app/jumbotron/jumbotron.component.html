@@ -1,0 +1,16 @@
+<section
+  class="jumb-img"
+  [style.background-image]="'url(assets/jumb-image.jpg)'"
+>
+  <div class="jumb-text px-5 py-5">
+    <h2 class="txt-center animate__animated animate__rollIn">
+      {{ pageTitle }}
+    </h2>
+    <p class="animate__animated animate__backInRight">
+      <ng-container *ngFor="let link of breadcrumbLinks; let last = last">
+        <span [routerLink]="link.link">{{ link.label }}</span>
+        <span *ngIf="!last"> | </span>
+      </ng-container>
+    </p>
+  </div>
+</section>

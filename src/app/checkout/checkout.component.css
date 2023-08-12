@@ -1,0 +1,95 @@
+.main_cnt {
+  display: flex;
+  gap: 1%;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+.details_cnt {
+  width: 47%;
+  height: 90vh;
+  border: 2px solid whitesmoke;
+}
+.details_header {
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.details_header s {
+  text-decoration: none;
+}
+.details_cnt .inputField {
+  padding: 1px;
+  margin: auto;
+  width: 80%;
+  height: 65vh;
+}
+.details_cnt .inputField .name {
+  margin-top: 2px;
+  width: 43%;
+  padding: 2%;
+  border-radius: 0.3rem;
+  border: 3px solid whitesmoke;
+  outline: none;
+  margin-right: 10px;margin-bottom: 25px;
+}
+.details_cnt .inputField .address,
+.details_cnt .inputField .number {
+  width: 43%;
+  padding: 2%;
+  border-radius: 0.3rem;
+  border: 3px solid whitesmoke;
+  outline: none;
+  margin-bottom: 25px;
+  margin-right: 10px;
+}
+.details_cnt .inputField .apt {
+  width: 88%;
+  padding: 2%;
+  border-radius: 0.3rem;
+  border: 3px solid whitesmoke;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+.order_cnt {
+  width: 30%;
+  height: 70vh;
+  border: 2px solid whitesmoke;
+}
+.order_cnt .order_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 7vh;
+  text-transform: capitalize;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-bottom: 3px solid whitesmoke;
+}
+
+
+@media only screen and (max-width: 900px) {
+  .main_cnt {
+    display: inline;
+  }
+  .details_cnt {
+    width: 100%;
+    height: 80vh;
+  }
+  .order_cnt {
+    margin-top: 1pc;
+    width: 100%;
+    height: 70vh;
+  }
+  .order_cnt .order_header {
+    font-size: 2px;
+  }
+  .total_cnt p {
+    width: 30%;
+  }
+}

@@ -1,0 +1,45 @@
+<app-header></app-header>
+<app-catalog></app-catalog>
+<app-jumbotron
+  [pageTitle]="'Checkout'"
+  [breadcrumbLinks]="[
+    { label: 'Home', link: '' },
+    { label: 'Checkout', link: '/checkout' }
+  ]"
+>
+</app-jumbotron>
+<div class="main_cnt">
+  <div class="details_cnt">
+    <div class="details_header py-3 text-center">
+      <h3>shipping details</h3>
+    </div>
+    <div class="inputField">
+      <input type="text" class="name firstName" placeholder="First Name" />
+      <input type="text" class="name lastName" placeholder="Last Name" />
+      <input type="text" class="number" placeholder="Phone number" />
+      <input type="text" class="address" placeholder="Email Address" />
+      <input type="text" class="apt" placeholder="Country" />
+      <input type="text" class="apt" placeholder="Address Line 1" />
+      <input type="text" class="apt" placeholder="Address Line 2" />
+      <input type="text" class="apt" placeholder="Town / City" />
+      <input type="text" class="apt" placeholder="Postal Code" />
+    </div>
+  </div>
+  <div class="order_cnt">
+    <div class="order_header py-3 text-center">
+      <h3>Your Order</h3>
+    </div>
+    <div class="cart-total text-center">
+      <h4 class="py-4">Cart Total</h4>
+      <ul>
+        <li class="pb-4">
+          Items: <span>x {{ cartItems.length }}</span>
+        </li>
+        <li>
+          Total: <span>${{ calculateTotalPrice() }}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

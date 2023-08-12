@@ -1,0 +1,244 @@
+<div
+  class="modal fade"
+  id="cartModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cart Update</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">Products added Successfully</div>
+      <div class="modal-footer">
+        <button type="button" class="close-button" data-bs-dismiss="modal">
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="repeatModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cart Update</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">Cart has been updated</div>
+      <div class="modal-footer">
+        <button type="button" class="close-button" data-bs-dismiss="modal">
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="heartModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cart Update</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">Products added to wishlist</div>
+      <div class="modal-footer">
+        <button type="button" class="close-button" data-bs-dismiss="modal">
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="infoModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">
+          Product Description
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <div class="modal-content px-5 py-5">
+        <img src="" alt="Description Image" class="modal-image" />
+        <p class="modal-description">
+          In the world of botanical wonders, the majestic Rose (Rosa) stands
+          as a timeless emblem of love and beauty, while Lavender (Lavandula)
+          enchants with its soothing fragrance, and succulents, with their
+          captivating water-storing adaptations, bring a touch of desert charm
+          to both indoor and outdoor spaces; ferns, draped in delicate fronds,
+          thrive in the comforting embrace of humidity, gracing corners with an
+          air of elegance; the Monstera Deliciosa, with its iconic split leaves,
+          unfurls the mysteries of the tropics indoors; tulips (Tulipa), those
+          vivid heralds of spring, fill gardens with vibrant hues and new
+          beginnings.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="close-button" data-bs-dismiss="modal">
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div
+  class="modal fade"
+  id="wishlistModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cart Update</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">Wishlist</div>
+      <div class="modal-footer">
+        <button type="button" class="close-button" data-bs-dismiss="modal">
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="cartUpdateModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cart Product</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="cart-container">
+                <h2 class="py-4 text-center">Cart</h2>
+                <hr />
+                <div class="modal-body">
+                  <div class="modal-body">
+                    <table *ngIf="selectedProducts.length > 0">
+                      <thead>
+                        <tr>
+                          <th><strong>Name</strong></th>
+                          <th><strong>Image</strong></th>
+                          <th><strong>Price</strong></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let product of selectedProducts">
+                          <td>{{ product.name }}</td>
+                          <td>
+                            <img
+                              [src]="product.imageSrc"
+                              alt="{{ product.name }}"
+                              width="50"
+                              height="50"
+                            />
+                          </td>
+                          <td>{{ product.price }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="cart-buttons">
+                  <button id="emptycart" (click)="clearCart()">
+                    Empty Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="cart-coupon">
+                <p>Enter coupon code. It will be applied at checkout.</p>
+                <form action="#">
+                  <input type="text" placeholder="Your code here" />
+                  <button type="submit">APPLY</button>
+                </form>
+              </div>
+              <div class="cart-total">
+                <h4>Cart Total</h4>
+                <ul>
+                  <li>
+                    Items <span>x {{ selectedProducts.length }}</span>
+                  </li>
+                  <li>
+                    Total <span>${{ calculateTotalPrice() }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="checkout-link" routerLink="/checkout" data-bs-dismiss="modal"
+          >PROCEED TO CHECKOUT</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

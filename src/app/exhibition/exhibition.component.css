@@ -1,0 +1,118 @@
+.hero-categories-all {
+  background: #3c3f39;
+  position: relative;
+  cursor: pointer;
+}
+.hero-categories-all i {
+  font-size: 16px;
+  color: #ffffff;
+  margin-right: 10px;
+}
+.hero-categories-all span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.hero-categories ul {
+  border: 1px solid #ebebeb;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+}
+.hero-categories ul li a {
+  font-size: 16px;
+  color: #1c1c1c;
+  line-height: 39px;
+  display: block;
+}
+.hero-search-categories {
+  border: 2px solid whitesmoke;
+  border-right: 0px;
+  padding: 16px 20px;
+  font-size: 16px;
+  font-weight: 700;
+}
+.featured {
+  margin-top: 160px;
+}
+.featured-links {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.featured-links ul li {
+  font-size: 18px;
+  color: #1c1c1c;
+  display: inline-block;
+  margin-right: 25px;
+  position: relative;
+  cursor: pointer;
+}
+.featured-links ul li:last-child {
+  margin-right: 0;
+}
+.featured-item {
+  margin-bottom: 50px;
+}
+
+.featured-item-image img {
+  height: 230px;
+  width: 100%;
+  object-fit: contain;
+}
+.featured-item {
+  position: relative;
+}
+
+.featured-item-image {
+  position: relative;
+  background: whitesmoke;
+}
+
+.featured-item-pic-hover {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.featured-item-image:hover .featured-item-pic-hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featured-item-pic-hover a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 20px;
+  color: #3c3f39;
+  margin: 0 5px;
+}
+
+.featured-item-pic-hover a:hover {
+  background-color: #3c3f39;
+  color: white;
+  transform: rotate(360deg);
+  transition: 0.5s ease-in;
+}
+
+.featured-item-text {
+  text-align: center;
+  padding-top: 15px;
+}
+.featured-item-text h6 {
+  margin-bottom: 10px;
+}
+.featured-item-text h5 {
+  color: #252525;
+  font-weight: 700;
+}

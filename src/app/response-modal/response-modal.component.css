@@ -1,0 +1,154 @@
+/* Modal */
+.modal-header {
+  background-color: #3c3f39;
+}
+.modal-title {
+  color: #fff;
+  font-weight: 700;
+}
+.modal-body {
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+}
+.close-button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 50%;
+  background: #3c3f39;
+  color: #fff;
+}
+.btn-close {
+  background-color: #fff;
+}
+.cart-container {
+  border: 1px solid #e0e4cc;
+  border-radius: 5px;
+  height: 100%;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+}
+table {
+  margin-bottom: 1em;
+  border-collapse: collapse;
+}
+table td,
+table th {
+  text-align: left;
+  padding: 0.25em 1em;
+  border-bottom: 1px solid #e0e4cc;
+}
+
+.cart-buttons {
+  width: auto;
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em 0;
+}
+.cart-container button,
+.cart-container input[type="submit"] {
+  border: 1px solid transparent;
+  color: #fff;
+  background: #3c3f39;
+  padding: 0.6em 1em;
+  font-size: 1em;
+  line-height: 1;
+  border-radius: 1.2em;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out,
+    border-color 0.2s ease-in-out;
+}
+.cart-container button:hover,
+.cart-container button:focus,
+.cart-container button:active,
+.cart-container[type="submit"]:hover,
+.cart-container input[type="submit"]:focus,
+.cart-container input[type="submit"]:active {
+  background: #3c3f39;
+  color: #fff;
+  cursor: pointer;
+}
+#emptycart {
+  margin-right: 1em;
+}
+table td:nth-last-child(1) {
+  text-align: right;
+}
+
+.cart-coupon {
+  background: whitesmoke;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+.cart-coupon p {
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+.cart-coupon form {
+  position: relative;
+}
+.cart-coupon form input {
+  height: 46px;
+  width: 100%;
+  border: 1px solid whitesmoke;
+  font-size: 14px;
+  color: #3c3f39;
+  padding-left: 20px;
+}
+.cart-coupon form button {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: #121212;
+  border: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 30px;
+}
+.cart-total {
+  background: whitesmoke;
+  padding: 30px;
+}
+.cart-total ul li {
+  list-style: none;
+  font-size: 16px;
+  color: #3c3f39;
+  line-height: 36px;
+  overflow: hidden;
+}
+.cart-total ul li span {
+  font-weight: 700;
+  color: #121212;
+  float: right;
+}
+.cart-total ul li:last-child span {
+  color: #3c3f39;
+}
+.checkout-link {
+  color: #121212;
+  display: block;
+  color: #fff;
+  background: #121212;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding: 14px 20px 12px;
+  text-align: center;
+}
+
+.modal-image {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.modal-description {
+  font-size: 16px;
+  line-height: 1.5;
+}

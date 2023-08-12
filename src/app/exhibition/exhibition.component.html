@@ -1,0 +1,101 @@
+<app-header></app-header>
+<app-catalog></app-catalog>
+<app-jumbotron
+  [pageTitle]="'Exhibition'"
+  [breadcrumbLinks]="[
+    { label: 'Home', link: '' },
+    { label: 'Exhibition', link: '/exhibition' }
+  ]"
+>
+</app-jumbotron>
+<div class="featured custom-container">
+  <div class="row">
+    <div class="col-lg-3">
+      <div class="hero-categories">
+        <div class="hero-categories-all d-flex gap-3 px-2 py-3">
+          <i class="bi bi-list"></i>
+          <span>General Categories</span>
+          <i class="bi bi-arrow-down"></i>
+        </div>
+        <ul>
+          <li *ngFor="let category of heroCategories">
+            <a
+              [routerLink]="['/exhibition']"
+              (click)="filterProducts(category)"
+              >{{ category }}</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-lg-9">
+      <div class="row">
+        <div
+          class="col-lg-4 col-md-4 col-sm-6"
+          *ngFor="let product of filteredProducts"
+        >
+          <div class="featured-item">
+            <div class="featured-item-image py-5">
+              <img [src]="product.imageSrc" alt="" />
+              <ul class="featured-item-pic-hover">
+                <li>
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#heartModal"
+                    (click)="addToFavorites()"
+                  >
+                    <i class="bi bi-heart"></i>
+                  </a>
+                </li>
+
+                <li>
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#repeatModal"
+                    (click)="repeatCart()"
+                  >
+                    <i class="bi bi-repeat"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#infoModal"
+                    (click)="cartInfo(product)"
+                  >
+                    <i class="bi bi-info-circle"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#cartModal"
+                    (click)="addToCart(product)"
+                  >
+                    <i class="bi bi-cart"></i>
+                  </a>
+                </li>
+              </ul>
+              <app-response-modal
+                [selectedProducts]="cartItems"
+                (emptyCartClicked)="clearCart()"
+              ></app-response-modal>
+            </div>
+            <div class="featured-item-text">
+              <h6>
+                <a href="#">{{ product.name }}</a>
+              </h6>
+              <h5>{{ product.price }}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,103 @@
+<app-header></app-header>
+<app-catalog></app-catalog>
+<app-jumbotron
+  [pageTitle]="'Contact'"
+  [breadcrumbLinks]="[
+    { label: 'Home', link: '' },
+    { label: 'Contact', link: '/contact' }
+  ]"
+>
+</app-jumbotron>
+<section class="contactUs" id="contactUs">
+  <div class="contactBox">
+    <!-- Form -->
+    <div class="contact form">
+      <h3>Send a Message</h3>
+      <form action="#">
+        <div class="formBox">
+          <div class="row50">
+            <div class="inputBox">
+              <span>First Name</span>
+              <input type="text" placeholder="Emmanuella" required />
+            </div>
+            <div class="inputBox">
+              <span>Last Name</span>
+              <input type="text" placeholder="John" required />
+            </div>
+          </div>
+          <div class="row50">
+            <div class="inputBox">
+              <span>Email</span>
+              <input
+                type="email"
+                placeholder="plantpalace@gmail.com"
+                required
+              />
+            </div>
+            <div class="inputBox">
+              <span>Mobile</span>
+              <input type="tel" placeholder="234032916634" required />
+            </div>
+          </div>
+          <div class="row100">
+            <div class="inputBox">
+              <span>Message</span>
+              <textarea placeholder="Write your message here..."></textarea>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="inputBox">
+              <input type="submit" value="Send" class="btn" (click)="onclick()" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!-- Info -->
+    <div class="contact info">
+      <h3>Contact Info</h3>
+      <div class="infoBox">
+        <div>
+          <span><i class="bi bi-geo-alt"></i></span>
+          <p>New Delhi</p>
+        </div>
+        <div>
+          <span><i class="bi bi-envelope"></i></span>
+          <a href="mailto:dahunsiabdulbasit@gmail.com"
+            >plantpalace@gmail.com</a
+          >
+        </div>
+        <div>
+          <span><i class="bi bi-telephone"></i></span>
+          <a href="tel:+234 9032916634">+23456236831</a>
+        </div>
+        <!-- Social Media Links -->
+        <ul class="sci">
+          <li>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Map -->
+    <div class="contact map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.561907193071!2d77.22732101529158!3d28.612916691718837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2daa9eb4d0b%3A0x717971125923e5d!2sIndia%20Gate!5e0!3m2!1sen!2sng!4v1678884876182!5m2!1sen!2sng"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
